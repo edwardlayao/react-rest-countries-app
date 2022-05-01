@@ -1,0 +1,15 @@
+.countryCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+}
+
+.countryCard * {
+  margin: 0.4rem;
+}
+
+.countryCard img {
+  width: 100%;
+}
