@@ -39,10 +39,10 @@ function App() {
       // then we update prop state
       setCountryData(countriesArray);
     } catch (error) {
+      // if the query 404'ed we set State to '404', MainSection component will handle this.
       setCountryData(404);
       console.error(error);
     }
-    // we search for the name and fetch the data from name endpoint
   }
 }
 

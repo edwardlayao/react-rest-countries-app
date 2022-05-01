@@ -13,7 +13,7 @@ function Navbar(props) {
   );
 
   function searchFormSubmitHandler(query) {
-    // we fetch data from the api
+    // we lift the state up to App.js
     props.navbarSearchFormSubmit(query);
   }
 }

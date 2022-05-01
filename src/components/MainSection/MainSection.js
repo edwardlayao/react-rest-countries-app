@@ -2,6 +2,10 @@ import React from "react";
 import CountryCard from "./CountryCard/CountryCard";
 import styles from "./MainSection.module.css";
 
+// TODO: Add pagination for multiple results
+// TODO: Add more info to countryCard
+// TODO: Add a CSS grid, media queries for responsiveness
+
 function MainSection(props) {
   // we set headerContent and countryContent to theri default values
   let headerContent = <h4>Showing {props.countryData.length} results</h4>;

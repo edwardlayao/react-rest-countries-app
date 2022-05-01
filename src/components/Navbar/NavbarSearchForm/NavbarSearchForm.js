@@ -30,6 +30,7 @@ function NavbarSearchForm(props) {
     event.preventDefault();
     //we guard for empty inputs
     if (!searchFormInput.trim()) return;
+    // we lift the state up to Navbar.js
     props.searchFormSubmit(searchFormInput.trim());
     setSearchFormInput("");
   }
