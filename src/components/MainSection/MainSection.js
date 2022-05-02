@@ -1,4 +1,5 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
+import Pagination from "../Pagination/Pagination";
 import CountryCard from "./CountryCard/CountryCard";
 import styles from "./MainSection.module.css";
 
@@ -7,8 +8,9 @@ import styles from "./MainSection.module.css";
 // TODO: Add a CSS grid, media queries for responsiveness
 
 function MainSection(props) {
-  // we set headerContent and countryContent to theri default values
+  // we set headerContent and countryContent to the default values
   let headerContent = <h4>Showing {props.countryData.length} results</h4>;
+  let countryPagination = [];
   let countryContent = null;
 
   // This only shows the first time the app is run...
@@ -21,11 +23,15 @@ function MainSection(props) {
   if (props.countryData === 404) {
     headerContent = <h4>Looks like your query is not found on the API.</h4>;
   } else {
-    countryContent = props.countryData.map((country) => {
-      return (
-        <CountryCard key={Math.random()} countryData={country}></CountryCard>
-      );
-    });
+    countryContent = (
+      <Pagination
+        data={props.countryData}
+        RenderComponent={CountryCard}
+        title={"Countries"}
+        pageLimit={5}
+        dataLimit={3}
+      ></Pagination>
+    );
   }
 
   return (

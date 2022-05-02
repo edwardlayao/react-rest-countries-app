@@ -25,8 +25,9 @@ function App() {
       const data = await response.json();
 
       // we make our own data structure that will be passed on the props.
-      const countriesArray = data.map((country) => {
+      const countriesArray = data.map((country, index) => {
         const countryArray = {
+          idx: index + 1,
           name: country.name,
           capital: country.capital,
           pops: country.population,
