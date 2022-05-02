@@ -1,15 +1,21 @@
-import React from "react";
+import React, { Fragment } from "react";
 import styles from "./Navbar.module.css";
 import NavbarSearchForm from "./NavbarSearchForm/NavbarSearchForm";
 
 function Navbar(props) {
   return (
-    <nav className={`${styles.mainNavbarContainer}`}>
-      <h1>RestCountriesApp</h1>
-      <NavbarSearchForm
-        searchFormSubmit={searchFormSubmitHandler}
-      ></NavbarSearchForm>
-    </nav>
+    <Fragment>
+      <nav className={`${styles.mainNavbarContainer}`}>
+        <a href="/">
+          <h1>
+            <span>Rest</span>Countries
+          </h1>
+        </a>
+        <NavbarSearchForm
+          searchFormSubmit={searchFormSubmitHandler}
+        ></NavbarSearchForm>
+      </nav>
+    </Fragment>
   );
 
   function searchFormSubmitHandler(query) {

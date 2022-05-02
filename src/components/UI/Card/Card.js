@@ -1,11 +1,13 @@
-import React from "react";
+import React, { Fragment } from "react";
 import styles from "./Card.module.css";
 
 function Card(props) {
   return (
-    <div className={`${styles.card} ${props.appendClass}`}>
-      {props.children}
-    </div>
+    <Fragment>
+      <div className={`${styles.card} ${props.appendClass}`}>
+        {props.children}
+      </div>
+    </Fragment>
   );
 }
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import CountryCard from "./CountryCard/CountryCard";
 import styles from "./MainSection.module.css";
 
@@ -14,6 +14,7 @@ function MainSection(props) {
   // This only shows the first time the app is run...
   if (!props.countryData.length)
     headerContent = <h4>Try Searching for a country in the search bar.</h4>;
+
   // We check if countryData contains a countryData obj, or a 404 int
   // 404 int means there was a problem in the query of the api
   // else we render the content with the countryData data.
@@ -28,10 +29,12 @@ function MainSection(props) {
   }
 
   return (
-    <div className={`${styles.mainSection}`}>
-      <header>{headerContent}</header>
-      <div className={styles.mainContent}>{countryContent}</div>
-    </div>
+    <Fragment>
+      <div className={`${styles.mainSection}`}>
+        <header>{headerContent}</header>
+        <div className={styles.mainContent}>{countryContent}</div>
+      </div>
+    </Fragment>
   );
 }
 

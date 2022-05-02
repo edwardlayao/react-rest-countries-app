@@ -1,12 +1,21 @@
 .mainNavbarContainer {
-  background-color: grey;
+  background-color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.mainNavbarContainer a {
+  text-decoration: none;
 }
 
 .mainNavbarContainer h1 {
-  color: white;
+  color: red;
+}
+
+.mainNavbarContainer span {
+  color: green;
 }

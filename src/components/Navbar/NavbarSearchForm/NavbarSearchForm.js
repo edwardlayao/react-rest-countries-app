@@ -1,23 +1,28 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import Button from "../../UI/Button/Button";
 import styles from "./NavbarSearchForm.module.css";
 
 function NavbarSearchForm(props) {
   const [searchFormInput, setSearchFormInput] = useState("");
   return (
-    <form onSubmit={searchFormSubmit} className={`${styles.navbarSearchForm}`}>
-      <label>Search for a country: </label>
-      <input
-        value={searchFormInput}
-        onChange={updateInputSearchFormState}
-        type="text"
-      ></input>
-      <Button
-        buttonClickHandler={null}
-        appendClass={styles.button}
-        label={"Search"}
-      ></Button>
-    </form>
+    <Fragment>
+      <form
+        onSubmit={searchFormSubmit}
+        className={`${styles.navbarSearchForm}`}
+      >
+        <label>Search for a country: </label>
+        <input
+          value={searchFormInput}
+          onChange={updateInputSearchFormState}
+          type="text"
+        ></input>
+        <Button
+          buttonClickHandler={null}
+          appendClass={styles.button}
+          label={"Search"}
+        ></Button>
+      </form>
+    </Fragment>
   );
 
   //   On-change we update seachFormInput state
