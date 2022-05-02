@@ -11,9 +11,33 @@
   font-weight: bold;
 }
 
+.navbarSearchForm input {
+  background-color: white;
+  height: 34px;
+  font-size: 1rem;
+}
+
 .button {
   padding: 0.5rem;
-  background-color: green;
+  background-color: orange;
   color: white;
   font-weight: bold;
+  font-size: 1rem;
+}
+
+.button:hover {
+  animation: scaleHov 0.1s ease-in-out;
+  transform: scale(1.2);
+}
+
+@keyframes scaleHov {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
 }
