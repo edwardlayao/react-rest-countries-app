@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   width: 25%;
+  height: 350px;
 }
 
 .countryCard * {
@@ -11,5 +12,12 @@
 }
 
 .countryCard img {
-  width: 100%;
+  width: 80%;
+}
+
+.latlng {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
